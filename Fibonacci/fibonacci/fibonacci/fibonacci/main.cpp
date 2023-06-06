@@ -89,7 +89,7 @@ int FibonacciSearch(int* pData, int size, int value)
 	if (nullptr == pData || size < 1)return -1;
 
 	// 获取fib数组 10000长度以内
-	const int FIBONACCI_MAX_IDX = 20;
+	const int FIBONACCI_MAX_IDX = 50;
 	int* pFibData = new int[FIBONACCI_MAX_IDX];
 	GetFibonacciArray(pFibData, FIBONACCI_MAX_IDX);
 
@@ -136,7 +136,7 @@ int FibonacciSearchAdvance(int* pData, int size, int value)
 	if (nullptr == pData || size < 1)return -1;
 	if (size == 1)return value == *pData ? 0 : -1;
 
-	const int FIBONACCI_MAX_IDX = 20;
+	const int FIBONACCI_MAX_IDX = 50;
 	int* pFibData = new int[FIBONACCI_MAX_IDX];
 	GetFibonacciArray(pFibData, FIBONACCI_MAX_IDX);
 
@@ -149,6 +149,20 @@ int FibonacciSearchAdvance(int* pData, int size, int value)
 
 	while (low <= high) {
 		int middle = low + pFibData[fibIdx - 1] - 1;
+
+		// 查询为middle逐渐逼近过程 high可以不变 
+		if (middle > size - 1) {
+			if (pData[high] == value)return high;
+			if (value > pData[high]) {
+				low = middle + 1;
+				fibIdx -= 2;
+			}
+			else {
+				--fibIdx;
+			}
+			continue;
+		}
+
 		if (pData[middle] == value) {
 			if (middle < size)return middle;
 			return size - 1;
@@ -174,12 +188,12 @@ int main()
 	int n = 44;
 	std::cout << Fast_Mod(20) << std::endl;
 	std::cout << Fib_Seq(2) << std::endl;
-	int arr[100] = { 0 };
-	for (int i = 0; i < 100; ++i) {
-		arr[i] = i;
+	int arr[10000] = { 0 };
+	for (int i = 1; i <= 10000; ++i) {
+		arr[i-1] = i + 100;
+		auto idx = FibonacciSearch(arr, i, 1189);
+		auto _idx = FibonacciSearchAdvance(arr, i, 1189);
+		std::cout << idx << " " << _idx << std::endl;
 	}
-	int arr1[2] = {1,2};
-	auto idx = FibonacciSearch(arr, 100, 60);
-	auto _idx = FibonacciSearchAdvance(arr, 100, 60);
 	return 0;
 }
