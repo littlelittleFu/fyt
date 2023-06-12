@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="资源文件\mysql">
+      <UniqueIdentifier>{0434ace9-eee6-4aca-9f43-334fa5fb6d87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\mysql\psi">
+      <UniqueIdentifier>{a04ae223-e2c4-426a-8bc7-66880601bbfa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mian.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cash.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Avatar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Agent.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="reflex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xueleifeng.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Resume.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Builder.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Observer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Status.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Adapter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Memento.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Composite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Avatar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Agent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="reflex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xueleifeng.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resume.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Builder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Observer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\decimal.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\errmsg.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\keycache.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\m_ctype.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\m_string.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\my_alloc.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\my_attribute.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\my_compiler.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\my_config_linux.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\my_config_win.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\my_dbug.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\my_dir.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\my_getopt.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\my_global.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\my_list.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\my_net.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\my_pthread.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\my_sys.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\my_xml.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql_com.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql_embed.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql_time.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql_version.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysqld_ername.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysqld_error.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\plugin.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\plugin_audit.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\plugin_ftparser.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\sql_common.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\sql_state.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\sslopt-case.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\sslopt-longopts.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\sslopt-vars.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\typelib.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\client_plugin.h">
+      <Filter>资源文件\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\innodb_priv.h">
+      <Filter>资源文件\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\plugin.h">
+      <Filter>资源文件\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\plugin_audit.h">
+      <Filter>资源文件\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\plugin_auth.h">
+      <Filter>资源文件\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\plugin_auth_common.h">
+      <Filter>资源文件\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\plugin_ftparser.h">
+      <Filter>资源文件\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\service_my_snprintf.h">
+      <Filter>资源文件\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\service_thd_alloc.h">
+      <Filter>资源文件\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\service_thd_wait.h">
+      <Filter>资源文件\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\service_thread_scheduler.h">
+      <Filter>资源文件\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\services.h">
+      <Filter>资源文件\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\thread_pool_priv.h">
+      <Filter>资源文件\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\psi\mysql_file.h">
+      <Filter>资源文件\mysql\psi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\psi\mysql_thread.h">
+      <Filter>资源文件\mysql\psi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\psi\psi.h">
+      <Filter>资源文件\mysql\psi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\psi\psi_abi_v1.h">
+      <Filter>资源文件\mysql\psi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySql\include\mysql\psi\psi_abi_v2.h">
+      <Filter>资源文件\mysql\psi</Filter>
+    </ClInclude>
+    <ClInclude Include="Status.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Adapter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Memento.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Composite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
