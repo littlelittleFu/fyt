@@ -8,53 +8,13 @@
 #include <cstdint>
 
 #include <iconv.h>
-#include <websocketpp/processors/hybi00.hpp>
-#include <websocketpp/processors/hybi07.hpp>
-#include <websocketpp/processors/hybi08.hpp>
-#include <websocketpp/processors/hybi13.hpp>
+#include <mutex>
 
-#include <websocketpp/config/core.hpp>
-#include <websocketpp/processors/processor.hpp>
-
+#include"HttpParse.hpp"
 #include "Log.h"
 #pragma comment(lib,"ws2_32.lib")
 #define _WINSOCK_DEPRECATED_NO_WARNINGS 1
 
-using ws_config = websocketpp::config::core;
-using ws_processor = websocketpp::processor::processor<ws_config>;
-using ws_processor_ptr = websocketpp::lib::shared_ptr<ws_processor>;
-using msg_manager = ws_config::con_msg_manager_type;
-using msg_manager_ptr = msg_manager::ptr;
-using rng_type = ws_config::rng_type;
-
-static msg_manager_ptr m_msg_manager = nullptr;
-static ws_processor_ptr m_processor = nullptr;
-static rng_type m_rng;
-
-void InitWSProcessor(int version)
-{
-	using namespace websocketpp;
-	m_msg_manager = lib::make_shared<msg_manager>();
-	if (m_processor) return;
-	if (!m_msg_manager) m_msg_manager = lib::make_shared<msg_manager>();
-
-	switch (version) {
-	case 0:
-		m_processor = lib::make_shared<processor::hybi00<ws_config>>(false, true, m_msg_manager);
-		break;
-	case 7:
-		m_processor = lib::make_shared<processor::hybi07<ws_config>>(false, true, m_msg_manager, lib::ref(m_rng));
-		break;
-	case 8:
-		m_processor = lib::make_shared<processor::hybi08<ws_config>>(false, true, m_msg_manager, lib::ref(m_rng));
-		break;
-	case 13:
-		m_processor = lib::make_shared<processor::hybi13<ws_config>>(false, true, m_msg_manager, lib::ref(m_rng));
-		break;
-	default:
-		break;
-	}
-}
 
 std::string gbk_to_utf8(const char* str)
 {
@@ -76,9 +36,16 @@ std::string gbk_to_utf8(const char* str)
 	return utf8str;
 }
 
+enum sock_type {
+	sock_normal,
+	sock_http,
+	sock_ws,
+};
+
 struct SOCK_DATA {
 	std::string ip;
-	int port;
+	int         port;
+	uint8_t     type;
 };
 
 int main() {
@@ -110,87 +77,52 @@ int main() {
 	sockaddr_in n_addr = {0};
 	int nsize = sizeof(n_addr);
 
-	namespace wspp = websocketpp;
+	//namespace wspp = websocketpp;
 
 	std::map<SOCKET,SOCK_DATA>m_s;
+
+	std::mutex m;
+
 	while (1) {
 		auto n_sock = accept(sock, (sockaddr*)&n_addr, &nsize);
+		int idx = 0;
 		if (n_sock == INVALID_SOCKET) {
 			LOG_ERROR("accept failed!");
 		}
 		SOCK_DATA data;
 		data.port = ntohs(n_addr.sin_port);
 		//data.ip = inet_ntoa(n_addr.sin_addr);
+		data.type = sock_normal;
 		m_s[n_sock] = data;
-		std::thread t([&]() {
+
+		std::thread t([=]() mutable{
 			char buf[1000] = {0};
 			char sendbuf[1000] = { 0 };
 			while (1) {
 				memset(buf, 0, 1000);
+				memset(sendbuf, 0, 1000);
 				recv(n_sock, buf, 1000, 0);
-				std::cout << "recv" << std::endl;
 				std::cout << buf << std::endl;
-				namespace wspp = websocketpp;
-				wspp::http::parser::request req;
-				size_t processed = 0;
-
-				try {
-					processed = req.consume(buf, strlen(buf));
-				}
-				catch (wspp::http::exception& e) {
-					LOG_ERROR("parse exception: %s", e.what());
-					//m_RecvPos = 0;
+				if (strlen(buf) == 0){
+					closesocket(n_sock);
 					return;
 				}
 
-				if (!req.ready()) {
-					//if (m_RecvPos > 1024) m_RecvPos = 0;
-					return;
-				}
-
-				if (wspp::processor::is_websocket_handshake(req)) {
-
-					auto version = wspp::processor::get_websocket_version(req);
-					InitWSProcessor(version);
-
-					if (m_processor) {
-						auto ec = m_processor->validate_handshake(req);
-
-						if (ec) {
-							LOG_ERROR("validate_handshake failed with error %d", ec.value());
-						}
-						else {
-							wspp::http::parser::response rsp;
-							ec = m_processor->process_handshake(req, "", rsp);
-							if (ec) {
-								LOG_ERROR("process_handshake failed with error %d", ec.value());
-							}
-							else {
-								rsp.set_version("HTTP/1.1");
-								rsp.set_status(wspp::http::status_code::switching_protocols);
-								rsp.append_header("Sec-WebSocket-Protocol", "binary");
-								auto ans = rsp.raw();
-								memset(sendbuf, 0, 1000);
-								strcpy_s(sendbuf, ans.c_str());	
-								std::cout << "send" << std::endl;
-								std::cout << sendbuf << std::endl;
-								send(n_sock, sendbuf, strlen(sendbuf), 0);
-							}
-						}
+				if (m_s[n_sock].type == sock_normal) {
+					auto ret = HttpParse::GetInstance()->Parse(buf, strlen(buf), sendbuf);
+					if (ret) {
+						m_s[n_sock].type = sock_ws;
+						send(n_sock, sendbuf, strlen(sendbuf), 0);
+						continue;
 					}
-					else {
-						LOG_ERROR("InitWSProcessor failed, version: %d", version);
-					}
+					std::string msg = "send message:";
+					msg += buf;
+					send(n_sock, msg.c_str(), msg.size(), 0);
 				}
-
-				//if (strcmp(buf, "close") == 0) {
-				//	closesocket(n_sock);
-				//	m_s.erase(n_sock);
-				//	break;
-				//}
-				//std::cout << buf << std::endl;
-				//memset(buf, 'a', 1000);
-				//send(n_sock, buf, 1000, 0);
+				else {
+				// send ws message
+					std::cout << "send ws message" << std::endl;
+				}
 
 				std::this_thread::sleep_for(std::chrono::seconds(1));
 
