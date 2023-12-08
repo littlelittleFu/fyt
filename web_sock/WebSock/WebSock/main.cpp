@@ -124,10 +124,12 @@ int main() {
 		m_s[n_sock] = data;
 		std::thread t([&]() {
 			char buf[1000] = {0};
+			char sendbuf[1000] = { 0 };
 			while (1) {
 				memset(buf, 0, 1000);
 				recv(n_sock, buf, 1000, 0);
-
+				std::cout << "recv" << std::endl;
+				std::cout << buf << std::endl;
 				namespace wspp = websocketpp;
 				wspp::http::parser::request req;
 				size_t processed = 0;
@@ -168,7 +170,11 @@ int main() {
 								rsp.set_status(wspp::http::status_code::switching_protocols);
 								rsp.append_header("Sec-WebSocket-Protocol", "binary");
 								auto ans = rsp.raw();
-								send(n_sock, ans.c_str(), ans.length(), 0);
+								memset(sendbuf, 0, 1000);
+								strcpy_s(sendbuf, ans.c_str());	
+								std::cout << "send" << std::endl;
+								std::cout << sendbuf << std::endl;
+								send(n_sock, sendbuf, strlen(sendbuf), 0);
 							}
 						}
 					}
@@ -177,16 +183,16 @@ int main() {
 					}
 				}
 
-				if (strcmp(buf, "close") == 0) {
-					closesocket(n_sock);
-					m_s.erase(n_sock);
-					break;
-				}
-				std::cout << buf << std::endl;
-				memset(buf, 'a', 1000);
-				send(n_sock, buf, 1000, 0);
+				//if (strcmp(buf, "close") == 0) {
+				//	closesocket(n_sock);
+				//	m_s.erase(n_sock);
+				//	break;
+				//}
+				//std::cout << buf << std::endl;
+				//memset(buf, 'a', 1000);
+				//send(n_sock, buf, 1000, 0);
 
-				//std::this_thread::sleep_for(std::chrono::seconds(1));
+				std::this_thread::sleep_for(std::chrono::seconds(1));
 
 			}
 			});
