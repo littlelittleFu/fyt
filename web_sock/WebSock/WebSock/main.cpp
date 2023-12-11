@@ -11,6 +11,7 @@
 #include <mutex>
 
 #include"HttpParse.hpp"
+#include"ParseWeb.hpp"
 #include "Log.h"
 #pragma comment(lib,"ws2_32.lib")
 #define _WINSOCK_DEPRECATED_NO_WARNINGS 1
@@ -50,7 +51,7 @@ struct SOCK_DATA {
 
 int main() {
 	WSADATA _WsaData;
-	int res = WSAStartup(MAKEWORD(2, 2),&_WsaData);
+	int res = WSAStartup(MAKEWORD(2, 2), &_WsaData);
 	if (res != NO_ERROR) {
 		LOG_ERROR("WSAstartup failed!");
 	}
@@ -61,7 +62,7 @@ int main() {
 		LOG_ERROR("create sock failed!");
 	}
 
-	sockaddr_in addr = {0};
+	sockaddr_in addr = { 0 };
 	addr.sin_family = AF_INET;
 	addr.sin_addr.s_addr = htonl(INADDR_ANY);
 	addr.sin_port = htons(16999);
@@ -74,14 +75,18 @@ int main() {
 		LOG_ERROR("listen failed!");
 	}
 
-	sockaddr_in n_addr = {0};
+	sockaddr_in n_addr = { 0 };
 	int nsize = sizeof(n_addr);
 
 	//namespace wspp = websocketpp;
 
-	std::map<SOCKET,SOCK_DATA>m_s;
+	std::map<SOCKET, SOCK_DATA>m_s;
 
 	std::mutex m;
+
+	std::thread	mThread[10];
+
+	int thread_idx = 0;
 
 	while (1) {
 		auto n_sock = accept(sock, (sockaddr*)&n_addr, &nsize);
@@ -94,16 +99,15 @@ int main() {
 		//data.ip = inet_ntoa(n_addr.sin_addr);
 		data.type = sock_normal;
 		m_s[n_sock] = data;
-
-		std::thread t([=]() mutable{
-			char buf[1000] = {0};
+		mThread[thread_idx] = std::move(std::thread([=]() mutable {
+			char buf[1000] = { 0 };
 			char sendbuf[1000] = { 0 };
 			while (1) {
 				memset(buf, 0, 1000);
 				memset(sendbuf, 0, 1000);
 				recv(n_sock, buf, 1000, 0);
 				std::cout << buf << std::endl;
-				if (strlen(buf) == 0){
+				if (strlen(buf) == 0) {
 					closesocket(n_sock);
 					return;
 				}
@@ -120,15 +124,20 @@ int main() {
 					send(n_sock, msg.c_str(), msg.size(), 0);
 				}
 				else {
-				// send ws message
-					std::cout << "send ws message" << std::endl;
+					// send ws message
+					WebParse::GetInstance()->Parse(buf, strlen(buf), sendbuf);
+					WebParse::GetInstance()->EncodeWeb(sendbuf, strlen(sendbuf));
+					std::cout << sendbuf << std::endl;
+					//std::string msg = "send message:";
+					//msg += sendbuf;
+					send(n_sock, sendbuf, strlen(sendbuf), 0);
 				}
 
 				std::this_thread::sleep_for(std::chrono::seconds(1));
 
 			}
-			});
-		t.join();
+			}));
+		thread_idx++;
 	}
 
 	return 0;
