@@ -113,12 +113,19 @@ public:
 #else
 	void MyRead() {
 		std::ifstream fs;
-		fs.open("test.txt", std::ios::in);
+		fs.open("desc.txt", std::ios::in);
 		if (!fs.is_open()) {
 			std::cout << "greater open file failed!" << std::endl;
 			return;
 		}
 		fs.seekg(0, std::ios::end);
+		char buf[1024] = {0};
+		std::streamoff size = fs.tellg();
+		fs.seekg(0, std::ios::beg);
+		while (fs >> buf) {
+			std::cout << buf << std::endl;
+		}
+		fs.close();
 	}
 #endif // NORMAL
 
