@@ -1,5 +1,10 @@
 一、cmake部分指令
 
+include_directories(.h) 包含头文件
+link_directories(lib) 连接库目录
+link_libraties(lib)连接库
+aux_source_directory(. src)获取当前目录下编译文件 定义为src ${src}
+
 1、project
 profect(projectname [cxx] [x] [java])
 执行工程支持的语言
