@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ConfigInfo.cpp" />
+    <ClCompile Include="LoginServer.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="SessionLS2CS.cpp" />
+    <ClCompile Include="SessionLS2DB.cpp" />
+    <ClCompile Include="SessionFactoryLS.cpp" />
+    <ClCompile Include="SessionLS2GS.cpp" />
+    <ClCompile Include="SessionContextMgr.cpp" />
+    <ClCompile Include="SessionLS2SS.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="SessionLS2Log.cpp" />
+    <ClCompile Include="ThirdPartLoginMgr.cpp" />
+    <ClCompile Include="LoginIPManager.cpp" />
+    <ClCompile Include="MaintenanceMgr.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConfigInfo.h" />
+    <ClInclude Include="LoginServer.h" />
+    <ClInclude Include="SessionLS2CS.h" />
+    <ClInclude Include="SessionLS2DB.h" />
+    <ClInclude Include="SessionFactoryLS.h" />
+    <ClInclude Include="SessionLS2GS.h" />
+    <ClInclude Include="SessionContextMgr.h" />
+    <ClInclude Include="SessionLS2SS.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SessionLS2Log.h" />
+    <ClInclude Include="ThirdPartLoginMgr.h" />
+    <ClInclude Include="LoginIPManager.h" />
+    <ClInclude Include="MaintenanceMgr.h" />
+  </ItemGroup>
+</Project>

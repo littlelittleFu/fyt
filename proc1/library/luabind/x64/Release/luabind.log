@@ -1,0 +1,19 @@
+﻿  class.cpp
+  class_info.cpp
+  class_registry.cpp
+  class_rep.cpp
+  create_class.cpp
+  error.cpp
+  exception_handler.cpp
+  function.cpp
+  inheritance.cpp
+  link_compatibility.cpp
+  object_rep.cpp
+  open.cpp
+  pcall.cpp
+  scope.cpp
+  stack_content_by_name.cpp
+  weak_ref.cpp
+  wrapper_base.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1545,5): warning MSB8012: TargetPath(E:\Legend165\source\library\luabind\x64\Release\luabind.lib) 与 Library 的 OutputFile 属性值(E:\Legend165\source\library\lib\luabind.lib)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Lib.OutputFile) 中指定的值匹配。
+  luabind.vcxproj -> E:\Legend165\source\library\luabind\x64\Release\luabind.lib

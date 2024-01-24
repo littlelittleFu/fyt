@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\Common\Globle.cpp" />
+    <ClCompile Include="ConfigInfo.cpp" />
+    <ClCompile Include="CustVarMgr.cpp" />
+    <ClCompile Include="GameMall.cpp" />
+    <ClCompile Include="CLuaLib.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MapServer.cpp" />
+    <ClCompile Include="ShopMgr.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="..\Common\IObserver.cpp" />
+    <ClCompile Include="..\Common\ISubject.cpp" />
+    <ClCompile Include="LuaHost.cpp" />
+    <ClCompile Include="SessionFactoryMS.cpp">
+      <Filter>Session</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionMS2CS.cpp">
+      <Filter>Session</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionMS2DB.cpp">
+      <Filter>Session</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionMS2GS.cpp">
+      <Filter>Session</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionMS2Log.cpp">
+      <Filter>Session</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionMS2SS.cpp">
+      <Filter>Session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\RoleAction.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\RoleAttr.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\RoleMove.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\RoleState.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\Role.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\Npc.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\Monster.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Item\RoleItem.cpp">
+      <Filter>Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\RolePack.cpp">
+      <Filter>Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Item\ItemBase.cpp">
+      <Filter>Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemMap.cpp">
+      <Filter>Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Item\SceneItem.cpp">
+      <Filter>Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Map\Map.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="MapAoi.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Map\MapGrid.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Map\MapMgr.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="MapRegion.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\Player.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="GuildMgr.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestMgr.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="SummonMonster.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\TeamMgr.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="TradeMgr.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="MailMgr.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\RoleVip.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\SkillData.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\BuffData.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\RoleTask.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\RoleTeam.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\RoleRelation.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\RoleEquip.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\RoleBuff.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\RoleAvatar.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Map\MapRoleMgr.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\MonsterAI.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterAI_Type1.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="AStarPathFinder.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterAI_Type2.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterAI_Type3.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterAI_Type4.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomEquipSiteAndSub.cpp" />
+    <ClCompile Include="MonsterAI_Trigger.cpp" />
+    <ClCompile Include="PKValueMgr.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CastleWarMgr.cpp" />
+    <ClCompile Include="Auction.cpp" />
+    <ClCompile Include="ProhibitChatMgr.cpp" />
+    <ClCompile Include="MonsterAI_Type5.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="PetAI_Type6.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="PetMgr.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="WantedList.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="RoleInfoCache.cpp" />
+    <ClCompile Include="FightInfoMgr.cpp" />
+    <ClCompile Include="PetAI_Type7.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="Pet.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="PetAI.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="DigMgr.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="GMCmdHandler.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorMsg.cpp" />
+    <ClCompile Include="TitleMgr.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\PlayerDoplganr.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Role\RoleSkill.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Item\SuitCounter.cpp">
+      <Filter>Item</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaGmMgr.cpp" />
+    <ClCompile Include="BossInfo.cpp" />
+    <ClCompile Include="PlayerChatProhibitMgr.cpp" />
+    <ClCompile Include="CustList.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\ErrorCode.h" />
+    <ClInclude Include="..\Common\EventTrigger.h" />
+    <ClInclude Include="..\Common\Globle.h" />
+    <ClInclude Include="..\Common\Object.h" />
+    <ClInclude Include="..\Common\Role\logic_def.hpp" />
+    <ClInclude Include="ConfigInfo.h" />
+    <ClInclude Include="CustVarMgr.h" />
+    <ClInclude Include="GameMall.h" />
+    <ClInclude Include="CLuaLib.h" />
+    <ClInclude Include="ShopMgr.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="..\Common\IObserver.h" />
+    <ClInclude Include="..\Common\ISubject.h" />
+    <ClInclude Include="LuaHost.h" />
+    <ClInclude Include="SessionFactoryMS.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionMS2CS.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionMS2DB.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionMS2GS.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionMS2Log.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionMS2SS.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\RoleAction.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\RoleAttr.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\RoleMove.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\RoleState.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\RoleType.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\Role.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\Npc.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\Monster.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PropExp\buff_prop_exp.h">
+      <Filter>PropExp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PropExp\global_prop_exp.h">
+      <Filter>PropExp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PropExp\group_attr_prop_exp.h">
+      <Filter>PropExp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PropExp\item_prop_exp.h">
+      <Filter>PropExp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PropExp\map_prop_exp.h">
+      <Filter>PropExp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PropExp\monster_prop_exp.h">
+      <Filter>PropExp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PropExp\quest_prop_exp.h">
+      <Filter>PropExp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PropExp\role_prop_exp.h">
+      <Filter>PropExp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PropExp\skill_prop_exp.h">
+      <Filter>PropExp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PropExp\exp_common.h">
+      <Filter>PropExp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Item\RoleItem.h">
+      <Filter>Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\RolePack.h">
+      <Filter>Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Item\ItemBase.h">
+      <Filter>Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemMap.h">
+      <Filter>Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Item\SceneItem.h">
+      <Filter>Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Map\Map.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="MapAoi.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Map\MapGrid.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Map\MapMgr.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="MapRegion.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\Player.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="GuildMgr.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestMgr.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="SummonMonster.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\TeamMgr.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="TradeMgr.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="MailMgr.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\RoleVip.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\SkillData.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\BuffData.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\RoleTask.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\RoleTeam.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\RoleRelation.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\RoleEquip.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\RoleBuff.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\RoleAvatar.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Map\MapRoleMgr.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\MonsterAI.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterAI_Type1.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="AStarPathFinder.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PropExp\buff_group_exp.h">
+      <Filter>PropExp</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterAI_Type2.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterAI_Type3.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterAI_Type4.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomEquipSiteAndSub.h" />
+    <ClInclude Include="MonsterAI_Trigger.h" />
+    <ClInclude Include="PKValueMgr.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CastleWarMgr.h" />
+    <ClInclude Include="Auction.h" />
+    <ClInclude Include="MapServer.h" />
+    <ClInclude Include="ProhibitChatMgr.h" />
+    <ClInclude Include="MonsterAI_Type5.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="PetAI_Type6.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="PetMgr.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="WantedList.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="RoleInfoCache.h" />
+    <ClInclude Include="FightInfoMgr.h" />
+    <ClInclude Include="PetAI_Type7.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="Pet.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="PetAI.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="DigMgr.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="GMCmdHandler.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PropExp\npc_prop_exp.h">
+      <Filter>PropExp</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorMsg.h" />
+    <ClInclude Include="TitleMgr.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PropExp\title_prop_exp.h">
+      <Filter>PropExp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\PlayerDoplganr.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Role\RoleSkill.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Item\SuitCounter.h">
+      <Filter>Item</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaGmMgr.h" />
+    <ClInclude Include="BossInfo.h" />
+    <ClInclude Include="PlayerChatProhibitMgr.h" />
+    <ClInclude Include="CustList.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Session">
+      <UniqueIdentifier>{a5c2aa2e-6439-4453-8483-d8a216168781}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Role">
+      <UniqueIdentifier>{adb7a02b-1dc1-407f-b81a-ecb3b046a86a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PropExp">
+      <UniqueIdentifier>{03039276-5c1f-418e-9092-e7d9fe958327}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item">
+      <UniqueIdentifier>{e0b802c9-e9a6-4893-92aa-67747178c7b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map">
+      <UniqueIdentifier>{d7556172-54b4-46c3-923c-7c06b1c7bd1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{e1eb8e05-17da-4a94-8849-cead8e972dcc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

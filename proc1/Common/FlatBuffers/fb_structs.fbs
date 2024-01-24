@@ -1,0 +1,26 @@
+struct Position {
+    x: int16;
+    y: int16;
+}
+
+table AutoPickItem {
+    mode:       uint8;
+    radius:     uint8;
+    relpos:     [Position];
+    interval:   uint16;
+}
+
+table DBElem {
+    eid:        uint8;
+    data:       [uint8];
+}
+
+table UpdateTable {
+    tid:        uint8;
+    key:        [uint8];
+	elems:      [DBElem];
+}
+
+table UpdateTables {
+    tables:     [UpdateTable];
+}

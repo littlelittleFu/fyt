@@ -1,0 +1,101 @@
+#pragma once
+#include "Session.h"
+
+class SessionMS2GS : public Session
+{
+public:
+    SessionMS2GS();
+	~SessionMS2GS();
+
+	virtual void OnEstablish(SOCKET _Socket);
+	virtual void OnLost();
+	virtual void OnMessage(uint16_t moduleid, uint16_t protoid, void* _pData);
+	virtual void OnError(DWORD _ErrorCode);
+	virtual void OnUpdate(UINT _Delta);
+	virtual void DoHeartBeat();
+
+private:
+    void HandleGateServMsg(uint16_t protoid, void* pData);
+    void HandleGateServMsg_HeartBeatReq(void *pData);
+    void HandleGateServMsg_CreatePlayerReq(void *pData);
+	void HandleGateServMsg_ReliveReq(void* pData);
+    void HandleGateServMsg_MoveReq(void *pData);
+    void HandleGateServMsg_TurnReq(void *pData);
+    void HandleGateServMsg_SpellTarget(void* pData);
+    void HandleGateServMsg_SpellGrid(void* pData);
+	void HandleGateServMsg_ExitReq(void* pData);
+    void HandleGateServMsg_SkillSwitch(void *pData);
+	void HandleGateServMsg_ItemApply (void* pData);
+	void HandleGateServMsg_ItemDrop(void* pData);
+    void HandleGateServMsg_ItemArrange(void* pData);
+	void HandleGateServMsg_ItemMove(void* pData);
+    void HandleGateServMsg_ItemSplit(void* pData);
+	void HandleGateServMsg_ItemPickUp(void* pData);
+    void HandleGateServMsg_RunServScriptReq(void *pData);
+    void HandleGateServMsg_RelationChatReq(void *pData);
+    void HandleGateServMsg_PrivateChatNtf(void *pData);
+    void HandleGateServMsg_SpeakerMsgReq(void *pData);
+	void HandleGateServMsg_TradeMallBuy(void* pData);
+	void HandleGateServMsg_TradeMallListReq(void* pData);
+    void HandleGateServMsg_NpcSelect(void *pData);
+    void HandleGateServMsg_NpcTalkReq(void *pData);
+    void HandleGateServMsg_TradeNpcBuy(void *pData);
+    void HandleGateServMsg_AtkModeReq(void *pData);
+    void HandleGateServMsg_QuestQueryCanAccept(void *pData);
+    void HandleGateServMsg_QuestAccept(void *pData);
+    void HandleGateServMsg_QuestDrop(void *pData);
+    void HandleGateServMsg_QuestAccomplish(void *pData);
+    void HandleGateServMsg_TeamoperationReq(void *pData);
+    void HandleGateServMsg_TeamLeaveReq(void *pData);
+    void HandleGateServMsg_TeamKickReq(void *pData);
+    void HandleGateServMsg_PlayerSwitchReq(void *pData);
+    void HandleGateServMsg_TeamInvite(void *pData);
+    void HandleGateServMsg_TeamInviteRsp(void *pData);
+    void HandleGateServMsg_GetAroundTeamReq(void *pData);
+    void HandleGateServMsg_TeamJoin(void* pData);
+    void HandleGateServMsg_TeamJoinRsp(void* pData);
+    void HandleGateServMsg_GetFamilyInfoReq(void *pData);
+    void HandleGateServMsg_PlayerQuery(void *pData);
+    void HandleGateServMsg_QuickBarSet(void* pData);
+    void HandleGateServMsg_GoldTake(void* pData);
+    void HandleGateServMsg_GoldDeposit(void* pData);
+    void HandleGateServMsg_FamilyJoinReq(void *pData);
+    void HandleGateServMsg_CancelFamilyJoinReq(void *pData);
+    void HandleGateServMsg_FamilyJoinAck(void *pData);
+    void HandleGateServMsg_FamilyTitleAwardReq(void *pData);
+    void HandleGateServMsg_FamilyExpellReq(void *pData);
+    void HandleGateServMsg_FamilyNoticeEditReq(void *pData);
+    void HandleGateServMsg_MailListReq(void* pData);
+    void HandleGateServMsg_MailOpenReq(void* pData);
+    void HandleGateServMsg_MailAttachmentGetReq(void* pData);
+    void HandleGateServMsg_MailDelReq(void* pData);
+    void HandleGateServMsg_FriendAddReq(void *pData);
+    void HandleGateServMsg_FamilyLeaveOrLastMsgReq(void *pData);
+    void HandleGateServMsg_FamilyDestroyReq(void *pData);
+    void HandleGateServMsg_RecordsMineReq(void* pData);
+    void HandleGateServMsg_DelegateMineReq(void* pData);
+    void HandleGateServMsg_DelegateListReq(void* pData);
+    void HandleGateServMsg_DelegateCancelReq(void* pData);
+    void HandleGateServMsg_DelegateSellCmd(void* pData);
+    void HandleGateServMsg_DelegateBuyCmd(void* pData);
+    void HandleGateServMsg_MarketSellCmd(void* pData);
+    void HandleGateServMsg_MarketBuyCmd(void* pData);
+    void HandleGateServMsg_PlayerQueryEx(void* pData);
+    void HandleGateServMsg_SyncSessionID(void *pData);
+    void HandleGateServMsg_JumpMapReq(void *pData);
+    void HandleGateServMsg_GetNpcPosReq(void* pData);
+    void HandleGateServMsg_StartDigReq(void *pData);
+    void HandleGateServMsg_RangePickup(void *pData);
+    void HandleGateServMsg_SyncClientBaseSetting(void* pData);
+    void HandleGateServMsg_VerifyBuyItemInfoReq(void *pData);
+    void HandleGateServMsg_ItemRefreshReq(void *pData);
+    void HandleGateServMsg_ItemTip(void* pData);
+    void HandleGateServMsg_TitleDel(void* pData);
+    void HandleGateServMsg_TitleWear(void* pData);
+    void HandleGateServMsg_TitleUnWear(void* pData);
+    void HandleGateServMsg_SetAutoModeAck(void *pData);
+    void HandleGateServMsg_TitleGetListReq(void* pData);
+    void HandleGateServMsg_UpdatePlayerStatus(void* pData);
+    void HandleGateServMsg_RoleCustVarReq(void* pData);
+    void HandleGateServMsg_GoodsPostRecordAck(void* pData);
+};

@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Protocol">
+      <UniqueIdentifier>{0d38ceb1-7c7c-477c-b533-173b1b596c19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{ed047438-2530-4133-b40e-80a8a9b1842d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameConfig">
+      <UniqueIdentifier>{7ffacc15-60cf-46b2-a7a9-79bac067c2bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LuaWrapper">
+      <UniqueIdentifier>{c09885db-1771-4533-9b11-d26390f854a1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Protocol\DataInfo.hpp">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\netdata.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ProtoClient.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ProtoClient2.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ProtoClient3.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ProtoClient7.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ProtoCS.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ProtoDB.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ProtoDef.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ProtoGS.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ProtoLog.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ProtoLS.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ProtoMgr.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ProtoMS.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ProtoSS.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Tools\AES.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\CsvHelper.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\DBConnector.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\FileHelper.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\IFileHelper.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\ILogHelper.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\inifile.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\ITimeHelper.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\LogHelper.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\MD5.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\StringHelper.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\TimeHelper.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\Tools.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\WinService.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\achievement_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\athleticsregion_table.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\att_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\Avatar_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\bornregion_table.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\buff_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\castle_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\db_include.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\GameCfgMgr.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\drop_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\DropPlus.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\fashion_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\global.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\GMcmd.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\group_attr.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\hair_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\hero_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\icon_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\inner_force_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\item_refine_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\item_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\JoinHitTable.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\jump_table.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\LoadDBData.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\loading_up.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\mall_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\map_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\mapicon_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\mons_info_table.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\monster_gen_table.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\monster_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\npc_gen_table.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\npc_quest_binding_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\npc_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\prompt_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\quest_template_parser.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\rednameregion_table.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\RegionBase.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\regioncommon.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\reliveregion_table.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\role_gm_mod.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\role_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\saferegion_table.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\shop_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\skill_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\stallregion_table.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\suit_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\TableBase.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\through_region.h">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\title_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\vip_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\vipshop_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\world_icon_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniDumper.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjID.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\LuaAPI.h">
+      <Filter>LuaWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\LuaEngine.h">
+      <Filter>LuaWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\LuaScript.h">
+      <Filter>LuaWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\LuaWrap.h">
+      <Filter>LuaWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\buff_group_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="PortToLinux.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\IScheduledHelper.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\ScheduledHelper.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\shabak_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\fcaseopen.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="spec.h" />
+    <ClInclude Include="DB\playerdrop_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\tsqueue.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\ctpl_stl.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\illegal_characters_table.hpp">
+      <Filter>GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\ErrorReporter.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\MsgCostStat.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Protocol\DataInfo.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\netdata.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ProtoClient.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ProtoClient2.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ProtoClient3.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ProtoClient7.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ProtoCS.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ProtoDB.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ProtoGS.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ProtoLog.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ProtoLS.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ProtoMgr.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ProtoMS.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ProtoSS.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Tools\AES.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\CsvHelper.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\DBConnector.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\FileHelper.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\IFileHelper.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\ILogHelper.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\inifile.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\ITimeHelper.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\LogHelper.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\MD5.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\StringHelper.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\TimeHelper.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\Tools.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\WinService.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\achievement_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\athleticsregion_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\att_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\Avatar_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\bornregion_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\buff_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\castle_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\GameCfgMgr.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\drop_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\DropPlus.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\fashion_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\global.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\GMcmd.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\group_attr.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\hair_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\hero_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\icon_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\inner_force_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\item_refine_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\item_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\JoinHitTable.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\jump_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\loading_up.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\mall_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\map_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\mapicon_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\mons_info_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\monster_gen_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\monster_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\npc_gen_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\npc_quest_binding_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\npc_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\prompt_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\quest_template_parser.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\rednameregion_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\reliveregion_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\role_gm_mod.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\role_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\saferegion_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\shop_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\skill_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\stallregion_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\suit_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\through_region.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\title_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\vip_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\vipshop_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\world_icon_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniDumper.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjID.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\LuaAPI.cpp">
+      <Filter>LuaWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\LuaEngine.cpp">
+      <Filter>LuaWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\LuaScript.cpp">
+      <Filter>LuaWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\buff_group_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\IScheduledHelper.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\ScheduledHelper.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\shabak_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\fcaseopen.c">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\playerdrop_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\illegal_characters_table.cpp">
+      <Filter>GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\ErrorReporter.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\MsgCostStat.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

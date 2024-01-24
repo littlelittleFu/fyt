@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="SessionCS2DB.cpp" />
+    <ClCompile Include="SessionCS2GS.cpp" />
+    <ClCompile Include="SessionCS2Log.cpp" />
+    <ClCompile Include="SessionCS2LS.cpp" />
+    <ClCompile Include="SessionCS2MS.cpp" />
+    <ClCompile Include="SessionCS2SS.cpp" />
+    <ClCompile Include="SessionFactoryCS.cpp" />
+    <ClCompile Include="AssignMapServer.cpp" />
+    <ClCompile Include="CenterServer.cpp" />
+    <ClCompile Include="ConfigInfo.cpp" />
+    <ClCompile Include="CustVarData.cpp" />
+    <ClCompile Include="GuildData.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="RoleData.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="TopList.cpp" />
+    <ClCompile Include="TradeData.cpp" />
+    <ClCompile Include="User.cpp" />
+    <ClCompile Include="UserMgr.cpp" />
+    <ClCompile Include="mail_table.cpp" />
+    <ClCompile Include="AuctionMgr.cpp" />
+    <ClCompile Include="GameMallMgr.cpp" />
+    <ClCompile Include="WantedList.cpp" />
+    <ClCompile Include="MonitorChatMsgMgr.cpp" />
+    <ClCompile Include="Title.cpp" />
+    <ClCompile Include="RedemptionCodeMgr.cpp" />
+    <ClCompile Include="SyncInfoToPlatformMgr.cpp" />
+    <ClCompile Include="GMCmdHandler.cpp" />
+    <ClCompile Include="CustListMgr.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SessionCS2DB.h" />
+    <ClInclude Include="SessionCS2GS.h" />
+    <ClInclude Include="SessionCS2Log.h" />
+    <ClInclude Include="SessionCS2LS.h" />
+    <ClInclude Include="SessionCS2MS.h" />
+    <ClInclude Include="SessionCS2SS.h" />
+    <ClInclude Include="SessionFactoryCS.h" />
+    <ClInclude Include="AssignMapServer.h" />
+    <ClInclude Include="CenterServer.h" />
+    <ClInclude Include="ConfigInfo.h" />
+    <ClInclude Include="CustVarData.h" />
+    <ClInclude Include="GuildData.h" />
+    <ClInclude Include="RoleData.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TopList.h" />
+    <ClInclude Include="TradeData.h" />
+    <ClInclude Include="User.h" />
+    <ClInclude Include="UserMgr.h" />
+    <ClInclude Include="mail_table.h" />
+    <ClInclude Include="AuctionMgr.h" />
+    <ClInclude Include="GameMallMgr.h" />
+    <ClInclude Include="WantedList.h" />
+    <ClInclude Include="MonitorChatMsgMgr.h" />
+    <ClInclude Include="Title.h" />
+    <ClInclude Include="RedemptionCodeMgr.h" />
+    <ClInclude Include="SyncInfoToPlatformMgr.h" />
+    <ClInclude Include="GMCmdHandler.h" />
+    <ClInclude Include="CustListMgr.h" />
+  </ItemGroup>
+</Project>

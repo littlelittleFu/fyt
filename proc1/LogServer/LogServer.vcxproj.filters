@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\Common\Tools\DBConnector.cpp" />
+    <ClCompile Include="ConfigInfo.cpp" />
+    <ClCompile Include="LogManager.cpp" />
+    <ClCompile Include="LogServer.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SessionFactoryLog.cpp" />
+    <ClCompile Include="SessionLog2CS.cpp" />
+    <ClCompile Include="SessionLog2DB.cpp" />
+    <ClCompile Include="SessionLog2GS.cpp" />
+    <ClCompile Include="SessionLog2LS.cpp" />
+    <ClCompile Include="SessionLog2MS.cpp" />
+    <ClCompile Include="SessionLog2SS.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Tools\DBConnector.h" />
+    <ClInclude Include="ConfigInfo.h" />
+    <ClInclude Include="LogManager.h" />
+    <ClInclude Include="LogServer.h" />
+    <ClInclude Include="SessionFactoryLog.h" />
+    <ClInclude Include="SessionLog2CS.h" />
+    <ClInclude Include="SessionLog2DB.h" />
+    <ClInclude Include="SessionLog2GS.h" />
+    <ClInclude Include="SessionLog2LS.h" />
+    <ClInclude Include="SessionLog2MS.h" />
+    <ClInclude Include="SessionLog2SS.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+</Project>

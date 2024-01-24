@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{52f4673b-ddf3-42dc-8423-394e9d5046f6}</ProjectGuid>
+    <RootNamespace>MapServer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <EnableASAN>true</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <EnableASAN>true</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <EnableASAN>false</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+    <EnableASAN>false</EnableASAN>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\bin</OutDir>
+    <IntDir>$(PlatformTarget)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(PlatformTarget)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(PlatformTarget)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(PlatformTarget)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\library;..\library\iconv;..\library\NetLib\win;..\library\openssl\include;./;..\Common;..\Common\DB;..\Common\Lua;..\Common\Protocol;..\Common\Tools;..\library\tinyxml;..\library\boost\boost_1_70_0;..\library\lua;..\library\luabind;..\library\netlib;..\library\zlib\include;..\Common\Map;..\Common\Role;..\Common\PropExp;</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\library\iconv;..\library\openssl\lib;..\library\zlib\prebuilt;..\library\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>iconv.lib;libcrypto.lib;zlibstat.lib;lua_d.lib;luabind_d.lib;NetLib_d.lib;tinyxml_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\bin\$(TargetFileName)</OutputFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\library;..\library\iconv;..\library\NetLib\win;..\library\openssl\include;./;..\Common;..\Common\DB;..\Common\Lua;..\Common\Protocol;..\Common\Tools;..\library\tinyxml;..\library\boost\boost_1_70_0;..\library\lua;..\library\luabind;..\library\netlib;..\library\zlib\include;..\Common\Map;..\Common\Role;..\Common\PropExp;</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\library\iconv;..\library\openssl\lib;..\library\zlib\prebuilt;..\library\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>iconv.lib;libcrypto.lib;zlibstat.lib;lua.lib;luabind.lib;NetLib.lib;tinyxml.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\bin\$(PlatformTarget)\$(TargetFileName)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINSOCK_DEPRECATED_NO_WARNINGS;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\library;..\library\iconv;..\library\NetLib\win;..\library\openssl\include;./;..\Common;..\Common\DB;..\Common\Lua;..\Common\Protocol;..\Common\Tools;..\library\tinyxml;..\library\boost\boost_1_70_0;..\library\lua;..\library\luabind;..\library\netlib;..\library\zlib\include;..\Common\Map;..\Common\Role;..\Common\PropExp;..\Common\Item;..\library\json</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <DisableSpecificWarnings>26812;26439;6262</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\library\iconv;..\library\openssl\lib;..\library\zlib\prebuilt;..\library\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Crypt32.lib;SrvComLib_d.lib;iconv.lib;libcrypto.lib;zlibstat.lib;lua_d.lib;luabind_d.lib;NetLib_d.lib;tinyxml_d.lib;json_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\bin\$(TargetFileName)</OutputFile>
+      <HeapReserveSize>40000000</HeapReserveSize>
+      <HeapCommitSize>40000000</HeapCommitSize>
+      <StackReserveSize>40000000</StackReserveSize>
+      <StackCommitSize>40000000</StackCommitSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINSOCK_DEPRECATED_NO_WARNINGS;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\library;..\library\iconv;..\library\NetLib\win;..\library\openssl\include;./;..\Common;..\Common\DB;..\Common\Lua;..\Common\Protocol;..\Common\Tools;..\library\tinyxml;..\library\boost\boost_1_70_0;..\library\lua;..\library\luabind;..\library\netlib;..\library\zlib\include;..\Common\Map;..\Common\Role;..\Common\PropExp;..\Common\Item;..\library\json</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\library\iconv;..\library\openssl\lib;..\library\zlib\prebuilt;..\library\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Crypt32.lib;SrvComLib.lib;iconv.lib;libcrypto.lib;zlibstat.lib;lua.lib;luabind.lib;NetLib.lib;tinyxml.lib;json.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\bin\$(TargetFileName)</OutputFile>
+      <HeapReserveSize>40000000</HeapReserveSize>
+      <HeapCommitSize>40000000</HeapCommitSize>
+      <StackReserveSize>40000000</StackReserveSize>
+      <StackCommitSize>40000000</StackCommitSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\Globle.cpp" />
+    <ClCompile Include="..\Common\IObserver.cpp" />
+    <ClCompile Include="..\Common\ISubject.cpp" />
+    <ClCompile Include="..\Common\Item\ItemBase.cpp" />
+    <ClCompile Include="..\Common\Item\RoleItem.cpp" />
+    <ClCompile Include="..\Common\Item\SceneItem.cpp" />
+    <ClCompile Include="..\Common\Item\SuitCounter.cpp" />
+    <ClCompile Include="..\Common\Map\Map.cpp" />
+    <ClCompile Include="..\Common\Map\MapGrid.cpp" />
+    <ClCompile Include="..\Common\Map\MapMgr.cpp" />
+    <ClCompile Include="..\Common\Map\MapRoleMgr.cpp" />
+    <ClCompile Include="..\Common\Role\BuffData.cpp" />
+    <ClCompile Include="..\Common\Role\Monster.cpp" />
+    <ClCompile Include="..\Common\Role\MonsterAI.cpp" />
+    <ClCompile Include="..\Common\Role\Npc.cpp" />
+    <ClCompile Include="..\Common\Role\Player.cpp" />
+    <ClCompile Include="..\Common\Role\PlayerDoplganr.cpp" />
+    <ClCompile Include="..\Common\Role\Role.cpp" />
+    <ClCompile Include="..\Common\Role\RoleAction.cpp" />
+    <ClCompile Include="..\Common\Role\RoleAttr.cpp" />
+    <ClCompile Include="..\Common\Role\RoleAvatar.cpp" />
+    <ClCompile Include="..\Common\Role\RoleBuff.cpp" />
+    <ClCompile Include="..\Common\Role\RoleEquip.cpp" />
+    <ClCompile Include="..\Common\Role\RoleMove.cpp" />
+    <ClCompile Include="..\Common\Role\RolePack.cpp" />
+    <ClCompile Include="..\Common\Role\RoleRelation.cpp" />
+    <ClCompile Include="..\Common\Role\RoleSkill.cpp" />
+    <ClCompile Include="..\Common\Role\RoleState.cpp" />
+    <ClCompile Include="..\Common\Role\RoleTask.cpp" />
+    <ClCompile Include="..\Common\Role\RoleTeam.cpp" />
+    <ClCompile Include="..\Common\Role\RoleVip.cpp" />
+    <ClCompile Include="..\Common\Role\SkillData.cpp" />
+    <ClCompile Include="..\Common\Role\TeamMgr.cpp" />
+    <ClCompile Include="BossInfo.cpp" />
+    <ClCompile Include="CustList.cpp" />
+    <ClCompile Include="DigMgr.cpp" />
+    <ClCompile Include="FightInfoMgr.cpp" />
+    <ClCompile Include="GMCmdHandler.cpp" />
+    <ClCompile Include="LuaGmMgr.cpp" />
+    <ClCompile Include="MonitorMsg.cpp" />
+    <ClCompile Include="PetAI_Type7.cpp" />
+    <ClCompile Include="Pet.cpp" />
+    <ClCompile Include="PetAI.cpp" />
+    <ClCompile Include="PlayerChatProhibitMgr.cpp" />
+    <ClCompile Include="RoleInfoCache.cpp" />
+    <ClCompile Include="AStarPathFinder.cpp" />
+    <ClCompile Include="CastleWarMgr.cpp" />
+    <ClCompile Include="Auction.cpp" />
+    <ClCompile Include="ConfigInfo.cpp" />
+    <ClCompile Include="CustomEquipSiteAndSub.cpp" />
+    <ClCompile Include="CustVarMgr.cpp" />
+    <ClCompile Include="GameMall.cpp" />
+    <ClCompile Include="CLuaLib.cpp" />
+    <ClCompile Include="GuildMgr.cpp" />
+    <ClCompile Include="ItemMap.cpp" />
+    <ClCompile Include="LuaHost.cpp" />
+    <ClCompile Include="MailMgr.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MapAoi.cpp" />
+    <ClCompile Include="MapRegion.cpp" />
+    <ClCompile Include="MapServer.cpp" />
+    <ClCompile Include="MonsterAI_Trigger.cpp" />
+    <ClCompile Include="MonsterAI_Type1.cpp" />
+    <ClCompile Include="MonsterAI_Type2.cpp" />
+    <ClCompile Include="MonsterAI_Type3.cpp" />
+    <ClCompile Include="MonsterAI_Type4.cpp" />
+    <ClCompile Include="MonsterAI_Type5.cpp" />
+    <ClCompile Include="PetAI_Type6.cpp" />
+    <ClCompile Include="PetMgr.cpp" />
+    <ClCompile Include="PKValueMgr.cpp" />
+    <ClCompile Include="ProhibitChatMgr.cpp" />
+    <ClCompile Include="QuestMgr.cpp" />
+    <ClCompile Include="SessionMS2CS.cpp" />
+    <ClCompile Include="SessionMS2DB.cpp" />
+    <ClCompile Include="SessionFactoryMS.cpp" />
+    <ClCompile Include="SessionMS2GS.cpp" />
+    <ClCompile Include="SessionMS2Log.cpp" />
+    <ClCompile Include="SessionMS2SS.cpp" />
+    <ClCompile Include="ShopMgr.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SummonMonster.cpp" />
+    <ClCompile Include="TitleMgr.cpp" />
+    <ClCompile Include="TradeMgr.cpp" />
+    <ClCompile Include="WantedList.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\ErrorCode.h" />
+    <ClInclude Include="..\Common\EventTrigger.h" />
+    <ClInclude Include="..\Common\IObserver.h" />
+    <ClInclude Include="..\Common\ISubject.h" />
+    <ClInclude Include="..\Common\Item\SuitCounter.h" />
+    <ClInclude Include="..\Common\PropExp\buff_group_exp.h" />
+    <ClInclude Include="..\Common\PropExp\buff_prop_exp.h" />
+    <ClInclude Include="..\Common\PropExp\exp_common.h" />
+    <ClInclude Include="..\Common\Globle.h" />
+    <ClInclude Include="..\Common\Item\ItemBase.h" />
+    <ClInclude Include="..\Common\Item\RoleItem.h" />
+    <ClInclude Include="..\Common\Item\SceneItem.h" />
+    <ClInclude Include="..\Common\Map\Map.h" />
+    <ClInclude Include="..\Common\Map\MapGrid.h" />
+    <ClInclude Include="..\Common\Map\MapMgr.h" />
+    <ClInclude Include="..\Common\Map\MapRoleMgr.h" />
+    <ClInclude Include="..\Common\Object.h" />
+    <ClInclude Include="..\Common\PropExp\global_prop_exp.h" />
+    <ClInclude Include="..\Common\PropExp\group_attr_prop_exp.h" />
+    <ClInclude Include="..\Common\PropExp\item_prop_exp.h" />
+    <ClInclude Include="..\Common\PropExp\map_prop_exp.h" />
+    <ClInclude Include="..\Common\PropExp\monster_prop_exp.h" />
+    <ClInclude Include="..\Common\PropExp\npc_prop_exp.h" />
+    <ClInclude Include="..\Common\PropExp\quest_prop_exp.h" />
+    <ClInclude Include="..\Common\PropExp\role_prop_exp.h" />
+    <ClInclude Include="..\Common\PropExp\skill_prop_exp.h" />
+    <ClInclude Include="..\Common\PropExp\title_prop_exp.h" />
+    <ClInclude Include="..\Common\Role\BuffData.h" />
+    <ClInclude Include="..\Common\Role\logic_def.hpp" />
+    <ClInclude Include="..\Common\Role\Monster.h" />
+    <ClInclude Include="..\Common\Role\MonsterAI.h" />
+    <ClInclude Include="..\Common\Role\Npc.h" />
+    <ClInclude Include="..\Common\Role\Player.h" />
+    <ClInclude Include="..\Common\Role\PlayerDoplganr.h" />
+    <ClInclude Include="..\Common\Role\Role.h" />
+    <ClInclude Include="..\Common\Role\RoleAction.h" />
+    <ClInclude Include="..\Common\Role\RoleAttr.h" />
+    <ClInclude Include="..\Common\Role\RoleAvatar.h" />
+    <ClInclude Include="..\Common\Role\RoleBuff.h" />
+    <ClInclude Include="..\Common\Role\RoleEquip.h" />
+    <ClInclude Include="..\Common\Role\RoleMove.h" />
+    <ClInclude Include="..\Common\Role\RolePack.h" />
+    <ClInclude Include="..\Common\Role\RoleRelation.h" />
+    <ClInclude Include="..\Common\Role\RoleSkill.h" />
+    <ClInclude Include="..\Common\Role\RoleState.h" />
+    <ClInclude Include="..\Common\Role\RoleTask.h" />
+    <ClInclude Include="..\Common\Role\RoleTeam.h" />
+    <ClInclude Include="..\Common\Role\RoleType.h" />
+    <ClInclude Include="..\Common\Role\RoleVip.h" />
+    <ClInclude Include="..\Common\Role\SkillData.h" />
+    <ClInclude Include="..\Common\Role\TeamMgr.h" />
+    <ClInclude Include="BossInfo.h" />
+    <ClInclude Include="CustList.h" />
+    <ClInclude Include="DigMgr.h" />
+    <ClInclude Include="FightInfoMgr.h" />
+    <ClInclude Include="GMCmdHandler.h" />
+    <ClInclude Include="LuaGmMgr.h" />
+    <ClInclude Include="MonitorMsg.h" />
+    <ClInclude Include="PetAI_Type7.h" />
+    <ClInclude Include="Pet.h" />
+    <ClInclude Include="PetAI.h" />
+    <ClInclude Include="PlayerChatProhibitMgr.h" />
+    <ClInclude Include="RoleInfoCache.h" />
+    <ClInclude Include="AStarPathFinder.h" />
+    <ClInclude Include="CastleWarMgr.h" />
+    <ClInclude Include="Auction.h" />
+    <ClInclude Include="ConfigInfo.h" />
+    <ClInclude Include="CustomEquipSiteAndSub.h" />
+    <ClInclude Include="CustVarMgr.h" />
+    <ClInclude Include="GameMall.h" />
+    <ClInclude Include="GuildMgr.h" />
+    <ClInclude Include="CLuaLib.h" />
+    <ClInclude Include="ItemMap.h" />
+    <ClInclude Include="LuaHost.h" />
+    <ClInclude Include="MailMgr.h" />
+    <ClInclude Include="MapAoi.h" />
+    <ClInclude Include="MapRegion.h" />
+    <ClInclude Include="MapServer.h" />
+    <ClInclude Include="MonsterAI_Trigger.h" />
+    <ClInclude Include="MonsterAI_Type3.h" />
+    <ClInclude Include="MonsterAI_Type1.h" />
+    <ClInclude Include="MonsterAI_Type2.h" />
+    <ClInclude Include="MonsterAI_Type4.h" />
+    <ClInclude Include="MonsterAI_Type5.h" />
+    <ClInclude Include="PetAI_Type6.h" />
+    <ClInclude Include="PetMgr.h" />
+    <ClInclude Include="PKValueMgr.h" />
+    <ClInclude Include="ProhibitChatMgr.h" />
+    <ClInclude Include="QuestMgr.h" />
+    <ClInclude Include="SessionMS2CS.h" />
+    <ClInclude Include="SessionMS2DB.h" />
+    <ClInclude Include="SessionFactoryMS.h" />
+    <ClInclude Include="SessionMS2GS.h" />
+    <ClInclude Include="SessionMS2Log.h" />
+    <ClInclude Include="SessionMS2SS.h" />
+    <ClInclude Include="ShopMgr.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SummonMonster.h" />
+    <ClInclude Include="TitleMgr.h" />
+    <ClInclude Include="TradeMgr.h" />
+    <ClInclude Include="WantedList.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

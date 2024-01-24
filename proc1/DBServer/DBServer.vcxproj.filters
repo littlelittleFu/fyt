@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ConfigInfo.cpp" />
+    <ClCompile Include="DBManager.cpp" />
+    <ClCompile Include="DBServer.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SessionDB2CS.cpp" />
+    <ClCompile Include="SessionDB2LS.cpp" />
+    <ClCompile Include="SessionDB2SS.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="..\Common\Tools\DBConnector.cpp" />
+    <ClCompile Include="SessionFactoryDB.cpp" />
+    <ClCompile Include="SessionDB2Log.cpp" />
+    <ClCompile Include="GMCmdHandler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConfigInfo.h" />
+    <ClInclude Include="DBManager.h" />
+    <ClInclude Include="DBServer.h" />
+    <ClInclude Include="SessionDB2CS.h" />
+    <ClInclude Include="SessionDB2LS.h" />
+    <ClInclude Include="SessionDB2SS.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="..\Common\Tools\DBConnector.h" />
+    <ClInclude Include="SessionFactoryDB.h" />
+    <ClInclude Include="SessionDB2Log.h" />
+    <ClInclude Include="..\Common\FlatBuffers\fb_structs_generated.h" />
+    <ClInclude Include="GMCmdHandler.h" />
+  </ItemGroup>
+</Project>

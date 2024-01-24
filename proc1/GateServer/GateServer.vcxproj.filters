@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ConfigInfo.cpp" />
+    <ClCompile Include="GateServer.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SessionGS2CS.cpp" />
+    <ClCompile Include="SessionFactoryGS.cpp" />
+    <ClCompile Include="SessionGS2CL.cpp" />
+    <ClCompile Include="SessionGS2LS.cpp" />
+    <ClCompile Include="SessionGS2MS.cpp" />
+    <ClCompile Include="SessionContextMgr.cpp" />
+    <ClCompile Include="SessionGS2SS.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="SessionGS2Log.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConfigInfo.h" />
+    <ClInclude Include="GateServer.h" />
+    <ClInclude Include="SessionGS2CS.h" />
+    <ClInclude Include="SessionFactoryGS.h" />
+    <ClInclude Include="SessionGS2CL.h" />
+    <ClInclude Include="SessionGS2LS.h" />
+    <ClInclude Include="SessionGS2MS.h" />
+    <ClInclude Include="SessionContextMgr.h" />
+    <ClInclude Include="SessionGS2SS.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SessionGS2Log.h" />
+  </ItemGroup>
+</Project>

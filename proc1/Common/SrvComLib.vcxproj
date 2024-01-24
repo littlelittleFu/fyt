@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{18cfb21a-0bd5-4b3b-b963-63fef002828c}</ProjectGuid>
+    <RootNamespace>SrvComLib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(PlatformTarget)\$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+    <IntDir>$(PlatformTarget)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(PlatformTarget)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOGDI;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>DB;Role;Tools;Protocol;..\library\NetLib;..\library\openssl\include;..\library\MySql\include;..\library\iconv;..\library\luabind;..\library\lua;..\library\boost\boost_1_70_0;..\library\tinyxml;..\library\libcurl\include\curl;./</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>..\library\lib\$(TargetFileName)</OutputFile>
+      <AdditionalDependencies>Shlwapi.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOGDI;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>DB;Role;Tools;Protocol;..\library\NetLib;..\library\openssl\include;..\library\MySql\include;..\library\iconv;..\library\luabind;..\library\lua;..\library\boost\boost_1_70_0;..\library\tinyxml;..\library\libcurl\include\curl;./</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>..\library\lib\$(TargetFileName)</OutputFile>
+      <AdditionalDependencies>Shlwapi.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="DB\achievement_table.hpp" />
+    <ClInclude Include="DB\athleticsregion_table.h" />
+    <ClInclude Include="DB\att_table.hpp" />
+    <ClInclude Include="DB\Avatar_table.hpp" />
+    <ClInclude Include="DB\bornregion_table.h" />
+    <ClInclude Include="DB\buff_group_table.hpp" />
+    <ClInclude Include="DB\buff_table.hpp" />
+    <ClInclude Include="DB\castle_table.hpp" />
+    <ClInclude Include="DB\GameCfgMgr.h" />
+    <ClInclude Include="DB\db_include.h" />
+    <ClInclude Include="DB\DropPlus.h" />
+    <ClInclude Include="DB\drop_table.hpp" />
+    <ClInclude Include="DB\fashion_table.hpp" />
+    <ClInclude Include="DB\global.hpp" />
+    <ClInclude Include="DB\GMcmd.hpp" />
+    <ClInclude Include="DB\group_attr.hpp" />
+    <ClInclude Include="DB\hair_table.hpp" />
+    <ClInclude Include="DB\hero_table.hpp" />
+    <ClInclude Include="DB\icon_table.hpp" />
+    <ClInclude Include="DB\illegal_characters_table.hpp" />
+    <ClInclude Include="DB\inner_force_table.hpp" />
+    <ClInclude Include="DB\item_refine_table.hpp" />
+    <ClInclude Include="DB\item_table.hpp" />
+    <ClInclude Include="DB\JoinHitTable.h" />
+    <ClInclude Include="DB\jump_table.h" />
+    <ClInclude Include="DB\LoadDBData.hpp" />
+    <ClInclude Include="DB\loading_up.h" />
+    <ClInclude Include="DB\mall_table.hpp" />
+    <ClInclude Include="DB\mapicon_table.hpp" />
+    <ClInclude Include="DB\map_table.hpp" />
+    <ClInclude Include="DB\monster_gen_table.h" />
+    <ClInclude Include="DB\monster_table.hpp" />
+    <ClInclude Include="DB\mons_info_table.h" />
+    <ClInclude Include="DB\npc_gen_table.h" />
+    <ClInclude Include="DB\npc_quest_binding_table.hpp" />
+    <ClInclude Include="DB\npc_table.hpp" />
+    <ClInclude Include="DB\playerdrop_table.hpp" />
+    <ClInclude Include="DB\prompt_table.hpp" />
+    <ClInclude Include="DB\quest_template_parser.hpp" />
+    <ClInclude Include="DB\rednameregion_table.h" />
+    <ClInclude Include="DB\RegionBase.h" />
+    <ClInclude Include="DB\regioncommon.h" />
+    <ClInclude Include="DB\reliveregion_table.h" />
+    <ClInclude Include="DB\role_gm_mod.hpp" />
+    <ClInclude Include="DB\role_table.hpp" />
+    <ClInclude Include="DB\saferegion_table.h" />
+    <ClInclude Include="DB\shabak_table.hpp" />
+    <ClInclude Include="DB\shop_table.hpp" />
+    <ClInclude Include="DB\skill_table.hpp" />
+    <ClInclude Include="DB\stallregion_table.h" />
+    <ClInclude Include="DB\suit_table.hpp" />
+    <ClInclude Include="DB\TableBase.h" />
+    <ClInclude Include="DB\through_region.h" />
+    <ClInclude Include="DB\title_table.hpp" />
+    <ClInclude Include="DB\vipshop_table.hpp" />
+    <ClInclude Include="DB\vip_table.hpp" />
+    <ClInclude Include="DB\world_icon_table.hpp" />
+    <ClInclude Include="Lua\LuaAPI.h" />
+    <ClInclude Include="Lua\LuaEngine.h" />
+    <ClInclude Include="Lua\LuaScript.h" />
+    <ClInclude Include="Lua\LuaWrap.h" />
+    <ClInclude Include="MiniDumper.h" />
+    <ClInclude Include="ObjID.h" />
+    <ClInclude Include="PortToLinux.h" />
+    <ClInclude Include="Protocol\DataInfo.hpp" />
+    <ClInclude Include="Protocol\netdata.h" />
+    <ClInclude Include="Protocol\ProtoClient.h" />
+    <ClInclude Include="Protocol\ProtoClient2.h" />
+    <ClInclude Include="Protocol\ProtoClient3.h" />
+    <ClInclude Include="Protocol\ProtoClient7.h" />
+    <ClInclude Include="Protocol\ProtoCS.h" />
+    <ClInclude Include="Protocol\ProtoDB.h" />
+    <ClInclude Include="Protocol\ProtoDef.h" />
+    <ClInclude Include="Protocol\ProtoGS.h" />
+    <ClInclude Include="Protocol\ProtoLog.h" />
+    <ClInclude Include="Protocol\ProtoLS.h" />
+    <ClInclude Include="Protocol\ProtoMgr.h" />
+    <ClInclude Include="Protocol\ProtoMS.h" />
+    <ClInclude Include="Protocol\ProtoSS.h" />
+    <ClInclude Include="spec.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Tools\AES.h" />
+    <ClInclude Include="Tools\ctpl_stl.h" />
+    <ClInclude Include="Tools\ErrorReporter.h" />
+    <ClInclude Include="Tools\MsgCostStat.h" />
+    <ClInclude Include="Tools\tsqueue.h" />
+    <ClInclude Include="Tools\CsvHelper.h" />
+    <ClInclude Include="Tools\DBConnector.h" />
+    <ClInclude Include="Tools\fcaseopen.h" />
+    <ClInclude Include="Tools\FileHelper.h" />
+    <ClInclude Include="Tools\IFileHelper.h" />
+    <ClInclude Include="Tools\ILogHelper.h" />
+    <ClInclude Include="Tools\inifile.h" />
+    <ClInclude Include="Tools\IScheduledHelper.h" />
+    <ClInclude Include="Tools\ITimeHelper.h" />
+    <ClInclude Include="Tools\LogHelper.h" />
+    <ClInclude Include="Tools\MD5.h" />
+    <ClInclude Include="Tools\ScheduledHelper.h" />
+    <ClInclude Include="Tools\StringHelper.h" />
+    <ClInclude Include="Tools\TimeHelper.h" />
+    <ClInclude Include="Tools\Tools.h" />
+    <ClInclude Include="Tools\WinService.h" />
+    <ClInclude Include="Types.h" />
+    <ClInclude Include="Utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DB\achievement_table.cpp" />
+    <ClCompile Include="DB\athleticsregion_table.cpp" />
+    <ClCompile Include="DB\att_table.cpp" />
+    <ClCompile Include="DB\Avatar_table.cpp" />
+    <ClCompile Include="DB\bornregion_table.cpp" />
+    <ClCompile Include="DB\buff_group_table.cpp" />
+    <ClCompile Include="DB\buff_table.cpp" />
+    <ClCompile Include="DB\castle_table.cpp" />
+    <ClCompile Include="DB\GameCfgMgr.cpp" />
+    <ClCompile Include="DB\DropPlus.cpp" />
+    <ClCompile Include="DB\drop_table.cpp" />
+    <ClCompile Include="DB\fashion_table.cpp" />
+    <ClCompile Include="DB\global.cpp" />
+    <ClCompile Include="DB\GMcmd.cpp" />
+    <ClCompile Include="DB\group_attr.cpp" />
+    <ClCompile Include="DB\hair_table.cpp" />
+    <ClCompile Include="DB\hero_table.cpp" />
+    <ClCompile Include="DB\icon_table.cpp" />
+    <ClCompile Include="DB\illegal_characters_table.cpp" />
+    <ClCompile Include="DB\inner_force_table.cpp" />
+    <ClCompile Include="DB\item_refine_table.cpp" />
+    <ClCompile Include="DB\item_table.cpp" />
+    <ClCompile Include="DB\JoinHitTable.cpp" />
+    <ClCompile Include="DB\jump_table.cpp" />
+    <ClCompile Include="DB\loading_up.cpp" />
+    <ClCompile Include="DB\mall_table.cpp" />
+    <ClCompile Include="DB\mapicon_table.cpp" />
+    <ClCompile Include="DB\map_table.cpp" />
+    <ClCompile Include="DB\monster_gen_table.cpp" />
+    <ClCompile Include="DB\monster_table.cpp" />
+    <ClCompile Include="DB\mons_info_table.cpp" />
+    <ClCompile Include="DB\npc_gen_table.cpp" />
+    <ClCompile Include="DB\npc_quest_binding_table.cpp" />
+    <ClCompile Include="DB\npc_table.cpp" />
+    <ClCompile Include="DB\playerdrop_table.cpp" />
+    <ClCompile Include="DB\prompt_table.cpp" />
+    <ClCompile Include="DB\quest_template_parser.cpp" />
+    <ClCompile Include="DB\rednameregion_table.cpp" />
+    <ClCompile Include="DB\reliveregion_table.cpp" />
+    <ClCompile Include="DB\role_gm_mod.cpp" />
+    <ClCompile Include="DB\role_table.cpp" />
+    <ClCompile Include="DB\saferegion_table.cpp" />
+    <ClCompile Include="DB\shabak_table.cpp" />
+    <ClCompile Include="DB\shop_table.cpp" />
+    <ClCompile Include="DB\skill_table.cpp" />
+    <ClCompile Include="DB\stallregion_table.cpp" />
+    <ClCompile Include="DB\suit_table.cpp" />
+    <ClCompile Include="DB\through_region.cpp" />
+    <ClCompile Include="DB\title_table.cpp" />
+    <ClCompile Include="DB\vipshop_table.cpp" />
+    <ClCompile Include="DB\vip_table.cpp" />
+    <ClCompile Include="DB\world_icon_table.cpp" />
+    <ClCompile Include="Lua\LuaAPI.cpp" />
+    <ClCompile Include="Lua\LuaEngine.cpp" />
+    <ClCompile Include="Lua\LuaScript.cpp" />
+    <ClCompile Include="MiniDumper.cpp" />
+    <ClCompile Include="ObjID.cpp" />
+    <ClCompile Include="Protocol\DataInfo.cpp" />
+    <ClCompile Include="Protocol\netdata.cpp" />
+    <ClCompile Include="Protocol\ProtoClient.cpp" />
+    <ClCompile Include="Protocol\ProtoClient2.cpp" />
+    <ClCompile Include="Protocol\ProtoClient3.cpp" />
+    <ClCompile Include="Protocol\ProtoClient7.cpp" />
+    <ClCompile Include="Protocol\ProtoCS.cpp" />
+    <ClCompile Include="Protocol\ProtoDB.cpp" />
+    <ClCompile Include="Protocol\ProtoGS.cpp" />
+    <ClCompile Include="Protocol\ProtoLog.cpp" />
+    <ClCompile Include="Protocol\ProtoLS.cpp" />
+    <ClCompile Include="Protocol\ProtoMgr.cpp" />
+    <ClCompile Include="Protocol\ProtoMS.cpp" />
+    <ClCompile Include="Protocol\ProtoSS.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Tools\AES.cpp" />
+    <ClCompile Include="Tools\CsvHelper.cpp" />
+    <ClCompile Include="Tools\DBConnector.cpp" />
+    <ClCompile Include="Tools\ErrorReporter.cpp" />
+    <ClCompile Include="Tools\fcaseopen.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Tools\FileHelper.cpp" />
+    <ClCompile Include="Tools\IFileHelper.cpp" />
+    <ClCompile Include="Tools\ILogHelper.cpp" />
+    <ClCompile Include="Tools\inifile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Tools\IScheduledHelper.cpp" />
+    <ClCompile Include="Tools\ITimeHelper.cpp" />
+    <ClCompile Include="Tools\LogHelper.cpp" />
+    <ClCompile Include="Tools\MD5.cpp" />
+    <ClCompile Include="Tools\MsgCostStat.cpp" />
+    <ClCompile Include="Tools\ScheduledHelper.cpp" />
+    <ClCompile Include="Tools\StringHelper.cpp" />
+    <ClCompile Include="Tools\TimeHelper.cpp" />
+    <ClCompile Include="Tools\Tools.cpp" />
+    <ClCompile Include="Tools\WinService.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
