@@ -38,6 +38,11 @@ int main() {
 	auto a = sizeof(clData);
 	MP.CreateMemoryBlock();
 	auto addr = MP.Allocate<clData>(sizeof(clData));
+	auto addr2 = MP.Allocate<clData>(sizeof(clData));
+
+	MP.Free(addr);
+	auto addr1 = MP.Allocate<clData>(sizeof(clData));
+
 	//addr = new clData;
 	const char* name = "ss";
 	childData d;

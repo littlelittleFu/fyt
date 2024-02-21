@@ -67,7 +67,7 @@ namespace Memory {
 
 		template<typename T>
 		inline T* MemoryPool::Allocate(size_t instances) {
-			return reinterpret_cast<T*>(this->Allocate(instances * sizeof(T)));
+			return reinterpret_cast<T*>(this->Allocate(instances /** sizeof(T)*/));
 		}
 
 		template<typename T>
