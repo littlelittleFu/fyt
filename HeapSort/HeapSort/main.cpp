@@ -1,21 +1,64 @@
 #include<iostream>
+#include<algorithm>
 #include"SortHeap.hpp"
-int arr[100] = { 0,1,2,3,4,5,6,7,8,9 };
+#include"insertSort.hpp"
+#include"bubbleSort.hpp"
+#include"binarySort.hpp"
+#include"quickSort.hpp"
 
-int arr1[100] = { 100,10,9,56,78,98,43,4,6,66 };
+void print(int* arr, int size) {
+	for (int i = 0; i < size; i++) {
+		std::cout << arr[i] << std::endl;
+	}
+}
+
+void mess(int* arr, int size) {
+
+	for (int i = 0; i < 100000; i++) {
+		arr[i] = rand() % 100001;
+	}
+}
+
+
+int arr[100000];
 
 int main() {
-	HeapSort::MaxHeapSort(arr, 10);
+	mess(arr, 100000); 
 	{
-		timer d;
-		for (int i = 0; i < 10 - 1; i++) {
-			for (int j = 0; j < 10 - 1 - i; j++) {
-				if (arr1[j] > arr1[j + 1]) {
-					std::swap(arr1[j], arr1[j + 1]);
-				}
-			}
-		}
+		timer t;
+		//bubble::sort(arr, 100000);
 	}
+	std::cout << std::is_sorted(arr, arr + 100000)<<std::endl;
 
-	auto c = arr;
+	mess(arr, 100000);
+	{
+		timer t;
+		binaryInsert::sort(arr, 100000);
+
+	}
+	std::cout << std::is_sorted(arr, arr + 100000)<<std::endl;
+
+	mess(arr, 100000);
+	{
+		timer t;
+		insert::sort(arr, 100000);
+
+	}
+	std::cout << std::is_sorted(arr, arr + 100000)<<std::endl;
+
+	mess(arr, 100000);
+	{
+		timer t;
+		quick::sort(arr, 100000);
+	}
+	std::cout << std::is_sorted(arr, arr + 100000) << std::endl;
+
+	mess(arr, 100000);
+	{
+		timer t;
+		HeapSort::MaxHeapSort(arr, 100000);
+	}
+	std::cout << std::is_sorted(arr, arr + 100000)<<std::endl;
+
+
 }
